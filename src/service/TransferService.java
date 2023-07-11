@@ -26,9 +26,6 @@ public class TransferService {
             BigDecimal buyerTeamRemainingBudget = toTeam.getCurrency()
                             .convertTo(buyerTeamBudget.subtract(playerValue),player.getCurrency(),toTeam.getCurrency());
             toTeam.setBudget(buyerTeamRemainingBudget);
-
-
-
             BigDecimal sellerTeamBudget = sellerTeam.getCurrency()
                     .convertTo(sellerTeam.getBudget(),sellerTeam.getCurrency(),player.getCurrency());
             sellerTeamBudget = sellerTeamBudget.add(player.getValue());
